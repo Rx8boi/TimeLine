@@ -21,7 +21,9 @@ Created with react-router
   *due to specifications of Flatiron's Final Project list may expand*
   
   ============================================================================
-  This Repository is Front-End of Applications
+  This Repository is Front-End of Application
   
-  For Back-End [RAILS API] Please visit:
+  For Back-End [RAILS API] 
+  Please visit:
   
+  https://github.com/Rx8boi/TimeLine-BackEnd
