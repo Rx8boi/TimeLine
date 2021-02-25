@@ -16,7 +16,8 @@ Created with react-router
 - There will be 3 routes:
   1. Main/Home Page
   2. About me
-  3. Timeline
+  3. Timeline [components]
+  
   *due to specifications of Flatiron's Final Project list may expand*
   
   ============================================================================
