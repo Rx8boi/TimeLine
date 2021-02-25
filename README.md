@@ -1,4 +1,4 @@
-# TimeLine
+# TimeLine [Front End]
 Time-Line application for Flatiron Final Project
 
 This application is a prelude to my portfolio.
