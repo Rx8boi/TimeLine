@@ -1,3 +1,37 @@
+# TimeLine [Front End]
+Time-Line application for Flatiron Final Project
+
+This application is a prelude to my portfolio.
+The thought process is to create a Time-Line that utilizes an API to index Events/Jobs/Educational 
+oppurtunities releavant to future software engineering endeavors.
+
+Specifications:
+Created with react-router
+  SPA (one HTML page to render whole appp)
+  2 container components
+  5 stateless components
+  Redux middleware
+  Rails API
+  
+- There will be 3 routes:
+  1. Main/Home Page
+  2. About me
+  3. Timeline [components]
+  
+  *due to specifications of Flatiron's Final Project list may expand*
+  
+  ============================================================================
+  
+  This Repository is Front-End of Application
+  
+  For Back-End [RAILS API] 
+  Please visit:
+  
+  https://github.com/Rx8boi/TimeLine-BackEnd
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -29,15 +63,6 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 ## Learn More
 
@@ -53,18 +78,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/c
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### My House Productions
+### Charles Butler Jr
+### 01/2021
