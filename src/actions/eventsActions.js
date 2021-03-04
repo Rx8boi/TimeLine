@@ -5,6 +5,7 @@ export const fetchEvents = () => {
   return (dispatch) => {
     fetch("http://localhost:3000/events")
       .then((resp) => resp.json())
-      .then((events) => console.log("fetchEvents", events));
+      .then((events) => dispatch({ type: "FETCH_EVENTS", payload: events }));
+    //.then((events) => console.log("fetchEvents", events))
   };
 };
