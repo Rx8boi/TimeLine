@@ -9,3 +9,16 @@ export const fetchEvents = () => {
     //.then((events) => console.log("fetchEvents", events))
   };
 };
+
+//need to POST
+
+export const addEvent = (event) => {
+  fetch("http://localhost:3000/events", {
+    method: "POST",
+    body: JSON.stringify(event),
+    headers: { "Content-Type": "application/json" },
+  })
+    .then((resp) => resp.json())
+    .then((event) => dispatch({ type: "ADD_EVENT", payload: event }));
+};
+//need to update store state in reducer with another case 'ADD_EVENT -> dispatch not defined error

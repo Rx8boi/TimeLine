@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import 
+import { addEvent } from "../actions/eventsActions";
 
 class EventsForm extends Component {
   //local state ->
@@ -9,10 +11,20 @@ class EventsForm extends Component {
     date: "",
     title: "",
   };
+
+  handleChange = (e) => {
+    //name is name attribute , value is what user types
+    const { name, value } = e.target;
+
+    this.setState({
+      [name]: value,
+    });
+  };
+
   render() {
     return (
       <div>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <br></br>
           Add a new Event
           <br></br>
