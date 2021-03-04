@@ -8,6 +8,7 @@ import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension"; //window._Redux_devtools replacement
 
 import App from "./components/App";
+import { rootReducer } from "./reducers/rootReducer";
 
 //need to create a store for redux => createStore 1. reducer 2. dev tools
 
