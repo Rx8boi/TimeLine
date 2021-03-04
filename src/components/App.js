@@ -1,7 +1,12 @@
 import React from "react";
+import EventsContainer from "./EventsContainer";
 
 const App = () => {
-  return <div>Hello Charles</div>;
+  return (
+    <div>
+      <EventsContainer />
+    </div>
+  );
 };
 
 export default App;
