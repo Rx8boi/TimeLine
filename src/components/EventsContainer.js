@@ -5,6 +5,7 @@ import { connect } from "react-redux"; //import connect method from react-redux
 
 import { fetchEvents } from "../actions/eventsActions"; //importing action
 import EventsForm from "./EventsForm";
+import EventsList from "./EventsList";
 
 class EventsContainer extends Component {
   componentDidMount() {
@@ -14,6 +15,7 @@ class EventsContainer extends Component {
     return (
       <div>
         Events Container
+        <EventsList />
         <EventsForm />
       </div>
     );
