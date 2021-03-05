@@ -5,14 +5,15 @@ import Intro from "./Intro";
 import About from "./About";
 import EventsContainer from "./EventsContainer";
 import Splash from "./Splash";
-
+import NoMatch from "./NoMatch";
 const Router = () => {
   return (
     <Switch>
-      <Route exact path="/splash" component={Splash} />
-      <Route exact path="/" component={Intro} />
+      <Route exact path="/" component={Splash} />
+      <Route exact path="/Intro" component={Intro} />
       <Route exact path="/about" component={About} />
       <Route exact path="/events" component={EventsContainer} />
+      <Route component={NoMatch} />
     </Switch>
   );
 };

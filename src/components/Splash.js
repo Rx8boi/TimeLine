@@ -11,12 +11,13 @@ const Splash = () => {
       renderer: "svg",
       loop: true,
       autoplay: true,
-      animationData: require("./4690-timeline.json"),
+      animationData: require("../assets/4690-timeline.json"),
     });
   }, []);
 
   return (
     <div>
+      <br></br>
       <div className="container" ref={container}>
         <Button variant="primary" size="lg" block>
           Enter
