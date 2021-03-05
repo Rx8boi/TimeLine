@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import lottie from "lottie-web";
+import Button from "react-bootstrap/Button";
 
 const Splash = () => {
   const container = useRef(null);
@@ -10,14 +11,17 @@ const Splash = () => {
       renderer: "svg",
       loop: true,
       autoplay: true,
-      animationData: require("./6301-timeline.json"),
+      animationData: require("./4690-timeline.json"),
     });
   }, []);
 
   return (
     <div>
-      <h1>React Lottie Demo</h1>
-      <div className="container" ref={container}></div>
+      <div className="container" ref={container}>
+        <Button variant="primary" size="lg" block>
+          Enter
+        </Button>
+      </div>
     </div>
   );
 };
