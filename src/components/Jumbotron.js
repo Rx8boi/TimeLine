@@ -14,7 +14,7 @@ const Styles = styled.div`
   }
 
   .overlay {
-    background-color: #000
+    background-color: #000;
     opacity: 0.6;
     position: absolute;
     top: 0;
@@ -23,7 +23,6 @@ const Styles = styled.div`
     right: 0;
     z-index: -1;
   }
-
 `;
 
 export const Jumbotron = () => (
@@ -32,6 +31,7 @@ export const Jumbotron = () => (
       <div className="overlay"></div>
       <Container>
         <h1>Timeline App</h1>
+        <p>A place to update & store events of your life</p>
       </Container>
     </Jumbo>
   </Styles>

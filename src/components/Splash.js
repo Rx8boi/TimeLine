@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import lottie from "lottie-web";
-import Button from "react-bootstrap/Button";
 
 const Splash = () => {
   const container = useRef(null);
