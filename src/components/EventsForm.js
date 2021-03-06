@@ -82,3 +82,11 @@ class EventsForm extends Component {
 }
 
 export default connect(null, { addEvent })(EventsForm);
+
+//Dropdown? For event_type
+//          <select value={this.state.event_type} onChange={this.handleChange} name="event_type">
+//            <option value="Work History">Work History</option>
+//            <option value="Education">Education</option>
+//            <option value="Life Event">Life Event</option>
+//           <option value="Other">Other</option>
+//            </select>

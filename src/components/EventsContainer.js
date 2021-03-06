@@ -2,10 +2,14 @@
 
 import React, { Component } from "react";
 import { connect } from "react-redux"; //import connect method from react-redux
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 import { fetchEvents } from "../actions/eventsActions"; //importing action
 import EventsForm from "./EventsForm";
 import EventsList from "./EventsList";
+import VerticalLine from "./lottie/VerticalLine";
 
 class EventsContainer extends Component {
   componentDidMount() {
@@ -15,8 +19,19 @@ class EventsContainer extends Component {
     return (
       <div>
         <br></br>
-        <EventsList />
-        <EventsForm />
+        <Container>
+          <Row>
+            <Col>
+              <EventsList />
+            </Col>
+            <Col>
+              <VerticalLine />
+            </Col>
+            <Col>
+              <EventsForm />
+            </Col>
+          </Row>
+        </Container>
         <br></br>
       </div>
     );
