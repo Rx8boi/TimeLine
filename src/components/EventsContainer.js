@@ -17,6 +17,7 @@ class EventsContainer extends Component {
         <br></br>
         <EventsList />
         <EventsForm />
+        <br></br>
       </div>
     );
   }
