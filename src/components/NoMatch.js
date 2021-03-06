@@ -10,7 +10,7 @@ const NoMatch = () => {
       renderer: "svg",
       loop: false,
       autoplay: true,
-      animationData: require("../assets/42972-404-robot-error.json"),
+      animationData: require("../assets/8909-404-error.json"),
     });
   }, []);
 
