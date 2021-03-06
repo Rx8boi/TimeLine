@@ -14,7 +14,7 @@ class EventsContainer extends Component {
   render() {
     return (
       <div>
-        Events Container
+        <br></br>
         <EventsList />
         <EventsForm />
       </div>

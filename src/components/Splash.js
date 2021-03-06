@@ -18,11 +18,7 @@ const Splash = () => {
   return (
     <div>
       <br></br>
-      <div className="container" ref={container}>
-        <Button variant="primary" size="lg" block>
-          Enter
-        </Button>
-      </div>
+      <div className="container" ref={container}></div>
     </div>
   );
 };

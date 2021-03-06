@@ -6,6 +6,7 @@ import About from "./About";
 import EventsContainer from "./EventsContainer";
 import Splash from "./Splash";
 import NoMatch from "./NoMatch";
+
 const Router = () => {
   return (
     <Switch>

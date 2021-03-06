@@ -4,15 +4,18 @@ import styled from "styled-components";
 
 const Styles = styled.div`
   .navbar {
-    background-color: #222;
+    background-color: #0968d8;
   }
 
+  .navbar .navbar-brand {
+    color: white;
+  }
   .navbar-background-color,
   .navbar-nav .nav-link {
-    color: #bbb;
+    color: white;
 
     &:hover {
-      color: white;
+      color: #66d9ff;
     }
   }
 `;
@@ -38,3 +41,5 @@ export const NavBar = () => (
     </Navbar>
   </Styles>
 );
+
+export default NavBar;

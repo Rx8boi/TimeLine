@@ -3,6 +3,7 @@ import React from "react";
 const Intro = () => {
   return (
     <div>
+      <br></br>
       <h1>This is the Intro page</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur magni
