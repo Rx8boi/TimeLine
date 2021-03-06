@@ -10,9 +10,6 @@ const About = () => {
       <Container>
         <Row>
           <Col>
-            <Developer />
-          </Col>
-          <Col>
             <h1>About Page</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
@@ -30,6 +27,9 @@ const About = () => {
               necessitatibus corrupti, expedita illo hic dolorum quia atque.
               Impedit, praesentium.
             </p>
+          </Col>
+          <Col>
+            <Developer />
           </Col>
         </Row>
       </Container>
