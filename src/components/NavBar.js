@@ -4,18 +4,22 @@ import styled from "styled-components";
 
 const Styles = styled.div`
   .navbar {
-    background-color: #0968d8;
+    background-color: #010002;
   }
 
   .navbar .navbar-brand {
     color: white;
+
+    &:hover {
+      color: #151e25;
+    }
   }
   .navbar-background-color,
   .navbar-nav .nav-link {
     color: white;
 
     &:hover {
-      color: #66d9ff;
+      color: #151e25;
     }
   }
 `;
@@ -23,7 +27,7 @@ const Styles = styled.div`
 export const NavBar = () => (
   <Styles>
     <Navbar expand="lg">
-      <Navbar.Brand href="/">TimeLine</Navbar.Brand>
+      <Navbar.Brand href="/">Welcome</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
