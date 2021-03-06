@@ -4,8 +4,8 @@ import { Switch, Route } from "react-router-dom";
 import Intro from "./Intro";
 import About from "./About";
 import EventsContainer from "./EventsContainer";
-import Splash from "./Splash";
-import NoMatch from "./NoMatch";
+import Splash from "../components/lottie/Splash";
+import NoMatch from "../components/lottie/NoMatch";
 
 const Router = () => {
   return (

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import lottie from "lottie-web";
 
-const Splash = () => {
+const Developer = () => {
   const container = useRef(null);
 
   useEffect(() => {
@@ -10,16 +10,15 @@ const Splash = () => {
       renderer: "svg",
       loop: true,
       autoplay: true,
-      animationData: require("../assets/4690-timeline.json"),
+      animationData: require("../../assets/24659-web-dev.json"),
     });
   }, []);
 
   return (
     <div>
-      <br></br>
       <div className="container" ref={container}></div>
     </div>
   );
 };
 
-export default Splash;
+export default Developer;
