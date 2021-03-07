@@ -31,7 +31,7 @@ class EventsForm extends Component {
       <div>
         <form onSubmit={this.handleSubmit}>
           <br></br>
-          Add a new Event
+          <h2>Add new Event</h2>
           <br></br>
           <label>Title: </label>
           <input
