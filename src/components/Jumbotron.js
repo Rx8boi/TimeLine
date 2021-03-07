@@ -2,6 +2,9 @@ import React from "react";
 import { Jumbotron as Jumbo, Container } from "react-bootstrap";
 import styled from "styled-components";
 import timeImage from "../assets/timeImage.jpg";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import SocialLogo from "./svg/Svg";
 
 const Styles = styled.div`
   .jumbotron {
@@ -9,19 +12,25 @@ const Styles = styled.div`
     background-size: cover;
     color: #ccc;
     height: 200px;
+    width: 100%;
     position: relative;
     z-index: -2;
+    bottom: -9vh;
   }
 
   .overlay {
     background-color: #000;
-    opacity: 0.5;
+    opacity: 0.3;
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     z-index: -1;
+  }
+  .foot {
+    text-align: right;
+    color: white;
   }
 `;
 
@@ -30,8 +39,23 @@ export const Jumbotron = () => (
     <Jumbo fluid className="jumbo">
       <div className="overlay"></div>
       <Container>
-        <h1>Timeline App</h1>
-        <p>A place to update & store events of your life</p>
+        <Row>
+          <Col>
+            <h1> Connect with us:</h1>
+            <p>
+              <SocialLogo />
+            </p>
+          </Col>
+          <Col>
+            <div className="social"></div>
+          </Col>
+          <Col>
+            <div className="foot">
+              <h1>Timeline App</h1>
+              <p>A place to update & store events of your life</p>
+            </div>
+          </Col>
+        </Row>
       </Container>
     </Jumbo>
   </Styles>

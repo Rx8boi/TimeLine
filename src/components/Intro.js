@@ -7,6 +7,7 @@ import Col from "react-bootstrap/Col";
 const Intro = () => {
   return (
     <div>
+      <br></br>
       <Container>
         <Row>
           <Col>
