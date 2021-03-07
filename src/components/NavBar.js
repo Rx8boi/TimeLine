@@ -2,6 +2,7 @@ import React from "react";
 import { Nav, Navbar } from "react-bootstrap";
 import styled from "styled-components";
 import timeImage from "../assets/timeImage.jpg";
+import Logo from "./svg/Logo";
 
 const Styles = styled.div`
   .navbar {
@@ -15,6 +16,7 @@ const Styles = styled.div`
 
   .navbar .navbar-brand {
     color: white;
+    display: inline-block;
 
     &:hover {
       color: #151e25;
@@ -33,7 +35,9 @@ const Styles = styled.div`
 export const NavBar = () => (
   <Styles>
     <Navbar expand="lg">
-      <Navbar.Brand href="/">TimeLine App</Navbar.Brand>
+      <Navbar.Brand href="/">
+        <Logo />
+      </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">

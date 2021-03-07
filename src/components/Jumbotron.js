@@ -5,6 +5,7 @@ import timeImage from "../assets/timeImage.jpg";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import SocialLogo from "./svg/Svg";
+import Logo from "./svg/Logo";
 
 const Styles = styled.div`
   .jumbotron {
@@ -31,6 +32,7 @@ const Styles = styled.div`
   .foot {
     text-align: right;
     color: white;
+    display: inline-block;
   }
 `;
 
@@ -51,7 +53,9 @@ export const Jumbotron = () => (
           </Col>
           <Col>
             <div className="foot">
-              <h1>Timeline App</h1>
+              <h1>
+                <Logo />
+              </h1>
               <p>A place to update & store events of your life</p>
             </div>
           </Col>
