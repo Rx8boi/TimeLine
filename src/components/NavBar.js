@@ -1,9 +1,15 @@
 import React from "react";
 import { Nav, Navbar } from "react-bootstrap";
 import styled from "styled-components";
+import timeImage from "../assets/timeImage.jpg";
 
 const Styles = styled.div`
   .navbar {
+    background: url(${timeImage}) no-repeat fixed bottom;
+    background-size: cover;
+    color: #ccc;
+    height: 100px;
+    position: relative;
     background-color: #010002;
   }
 
@@ -27,7 +33,7 @@ const Styles = styled.div`
 export const NavBar = () => (
   <Styles>
     <Navbar expand="lg">
-      <Navbar.Brand href="/">Welcome</Navbar.Brand>
+      <Navbar.Brand href="/">TimeLine App</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">

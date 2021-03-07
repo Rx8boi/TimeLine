@@ -9,7 +9,8 @@ import Col from "react-bootstrap/Col";
 import { fetchEvents } from "../actions/eventsActions"; //importing action
 import EventsForm from "./EventsForm";
 import EventsList from "./EventsList";
-import VerticalLine from "./lottie/VerticalLine";
+//import Modal from "./modal/Modal";
+//import VerticalLine from "./lottie/VerticalLine";
 
 class EventsContainer extends Component {
   componentDidMount() {
@@ -19,19 +20,18 @@ class EventsContainer extends Component {
     return (
       <div>
         <br></br>
+
         <Container>
           <Row>
             <Col>
               <EventsList />
             </Col>
-            <Col>
-              <VerticalLine />
-            </Col>
-            <Col>
+            <Col xs lg="2">
               <EventsForm />
             </Col>
           </Row>
         </Container>
+
         <br></br>
       </div>
     );
