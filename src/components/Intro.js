@@ -14,7 +14,7 @@ const Intro = () => {
             <Thinker />
           </Col>
           <Col>
-            <h1>Intro</h1>
+            <h1>Welcome To TimeLine App</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
               magni quas maiores sapiente eos soluta voluptatibus nobis
