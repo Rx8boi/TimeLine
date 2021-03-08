@@ -18,22 +18,16 @@ class EventsContainer extends Component {
   }
   render() {
     return (
-      <div>
-        <br></br>
-
-        <Container>
-          <Row>
-            <Col>
-              <EventsList />
-            </Col>
-            <Col xs lg="2">
-              <EventsForm />
-            </Col>
-          </Row>
-        </Container>
-
-        <br></br>
-      </div>
+      <Container>
+        <Row>
+          <Col>
+            <EventsList />
+          </Col>
+          <Col xs lg="2">
+            <EventsForm />
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }

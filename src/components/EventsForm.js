@@ -1,6 +1,68 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { addEvent } from "../actions/eventsActions";
+import styled from "styled-components";
+
+const Styles = styled.div`
+  .forms {
+    background-color: #f2f2f2;
+    margin: 70px auto;
+    width: 300px;
+    box-shadow: 0 0.34em 0.5em 0 rgba(16, 24, 60, 0.25),
+      0 0.5em 1.25em 0 rgba(61, 23, 79, 0.15) !important;
+    position: relative;
+    border-radius: 10px;
+    height: 470px;
+    display: inline-block;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+  }
+
+  .labels {
+    background-color: white;
+    margin: 20px auto;
+    width: 240px;
+    box-shadow: 0 0.34em 0.5em 0 rgba(16, 24, 60, 0.25),
+      0 0.5em 1.25em 0 rgba(61, 23, 79, 0.15) !important;
+    position: relative;
+    border-radius: 15px;
+    height: 310px;
+    display: inline-block;
+    padding: 25px;
+    text-align: left;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .formbutton {
+    width: 50%;
+    height: 30px;
+    margin-top: 4px;
+    border-radius: 2px;
+    box-shadow: 0 0.34em 0.5em 0 rgba(16, 24, 60, 0.25),
+      0 0.5em 1.25em 0 rgba(61, 23, 79, 0.15) !important;
+    background: linear-gradient(
+      90deg,
+      rgb(16, 24, 60) 0%,
+      rgb(61, 23, 79) 100%
+    );
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+  }
+
+  .formbutton:hover {
+    cursor: pointer;
+    box-shadow: 0 0.34em 0.5em 0 rgba(16, 24, 60, 0.25),
+      0 0.5em 1.25em 0 rgba(12, 99, 250, 0.15) !important;
+    background: linear-gradient(
+      90deg,
+      rgb(61, 23, 79) 0%,
+      rgb(12, 99, 250) 100%
+    );
+    transition: all 0.4s ease-out;
+  }
+`;
 
 class EventsForm extends Component {
   //local state ->
@@ -28,55 +90,58 @@ class EventsForm extends Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <br></br>
-          <h2>Add new Event</h2>
-          <br></br>
-          <label>Title: </label>
-          <input
-            type="text"
-            value={this.state.title}
-            onChange={this.handleChange}
-            name="title"
-          ></input>
-          <br></br>
-          <label>Event Type: </label>
-          <input
-            type="text"
-            value={this.state.event_type}
-            onChange={this.handleChange}
-            name="event_type"
-          ></input>
-          <br></br>
-          <label>Summary: </label>
-          <input
-            type="text_field"
-            value={this.state.summary}
-            onChange={this.handleChange}
-            name="summary"
-          ></input>
-          <br></br>
-          <label>Skills Learned: </label>
-          <input
-            type="text"
-            value={this.state.skills_learned}
-            onChange={this.handleChange}
-            name="skills_learned"
-          ></input>
-          <br></br>
-          <label>Date: </label>
-          <input
-            type="date"
-            value={this.state.date}
-            onChange={this.handleChange}
-            name="date"
-          ></input>
-          <br></br>
-          <br></br>
-          <input type="submit" value="Add Event" />
-        </form>
-      </div>
+      <Styles>
+        <div className="forms">
+          <form onSubmit={this.handleSubmit}>
+            <br></br>
+            <h2>Add Event</h2>
+
+            <div className="labels">
+              <label>Title: </label>
+              <br></br>
+              <input
+                type="text"
+                value={this.state.title}
+                onChange={this.handleChange}
+                name="title"
+                placeholder="Title of new event"
+              ></input>
+              <br></br>
+              <label>Event Type: </label>
+              <br></br>
+              <input
+                type="text"
+                value={this.state.event_type}
+                onChange={this.handleChange}
+                name="event_type"
+                placeholder="Type of Event"
+              ></input>
+              <br></br>
+              <label>Summary: </label>
+              <br></br>
+              <input
+                type="text_field"
+                value={this.state.summary}
+                onChange={this.handleChange}
+                name="summary"
+                placeholder="Summary of Events"
+              ></input>
+              <br></br>
+              <label>Date: </label>
+              <br></br>
+              <input
+                type="date"
+                value={this.state.date}
+                onChange={this.handleChange}
+                name="date"
+              ></input>
+            </div>
+            <br></br>
+
+            <input type="submit" value="Submit" className="formbutton" />
+          </form>
+        </div>
+      </Styles>
     );
   }
 }
