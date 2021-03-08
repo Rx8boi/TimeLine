@@ -11,6 +11,9 @@ const Splash = () => {
       loop: true,
       autoplay: true,
       animationData: require("../../assets/4690-timeline.json"),
+      rendererSettings: {
+        scaleMode: ".5",
+      },
     });
   }, []);
 

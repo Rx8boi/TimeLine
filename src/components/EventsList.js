@@ -19,13 +19,13 @@ const Styles = styled.div`
   }
 
   .vertical-timeline-element-content {
-    box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25),
-      0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
-    padding: 2em 3em !important;
+    box-shadow: 0 0.34em 0.5em 0 rgba(16, 24, 60, 0.25),
+      0 0.5em 1.25em 0 rgba(61, 23, 79, 0.15) !important;
+    padding: 1em 3em !important;
   }
 
   #description {
-    margin: 1.5em 0 2em 0;
+    margin: 1.2em 0 2em 0;
   }
 `;
 
