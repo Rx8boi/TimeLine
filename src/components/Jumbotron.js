@@ -43,7 +43,7 @@ export const Jumbotron = () => (
       <Container>
         <Row>
           <Col>
-            <h2> Connect with us:</h2>
+            <h2> Connect with me:</h2>
             <p>
               <SocialLogo />
             </p>
