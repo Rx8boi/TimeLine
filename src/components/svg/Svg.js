@@ -8,11 +8,21 @@ import { ReactComponent as LinkedLogo } from "../../assets/icons8-linkedin.svg";
 const ReactComponent = () => {
   return (
     <div>
-      <InstaLogo />
-      <FaceLogo />
-      <TwitterLogo />
-      <LinkedLogo />
-      <GitLogo />
+      <a href="https://www.instagram.com/charles.atx">
+        <InstaLogo />
+      </a>
+      <a href="https://www.facebook.com">
+        <FaceLogo />
+      </a>
+      <a href="https://twitter.com/Charles_atx_">
+        <TwitterLogo />
+      </a>
+      <a href="https://www.linkedin.com/in/charlesbutlerjr">
+        <LinkedLogo />
+      </a>
+      <a href="https://www.github.com/Rx8boi">
+        <GitLogo />
+      </a>
     </div>
   );
 };
