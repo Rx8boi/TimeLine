@@ -24,3 +24,12 @@ export const addEvent = (event) => {
   };
 };
 //need to update store state in reducer with another case 'ADD_EVENT -> dispatch not defined error
+
+//DELETE action -> by eventID
+// call remove even then return REMOVE_EVENT -> reducer
+export const removeEvent = (eventID) => {
+  return {
+    type: "REMOVE_EVENT",
+    payload: eventID,
+  };
+};

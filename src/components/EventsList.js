@@ -1,17 +1,37 @@
 import React from "react";
 import { connect } from "react-redux";
+//import { removeEvent } from "../actions/eventsActions";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { ReactComponent as TimeIcon } from "../assets/icons8-automation.svg";
+import { ReactComponent as AddIcon } from "../assets/icons8-plus.svg";
 import styled from "styled-components";
+import { Button, ModalBody } from "react-bootstrap";
+import Modal from "react-bootstrap/Modal";
+import EventsForm from "./EventsForm";
+import { useState } from "react";
 
 const Styles = styled.div`
+  .add {
+    position: relative;
+    width: 100%;
+  }
+
   .vertical-timeline-element-title {
     text-align: center;
     font-family: "Bebas Neue", sans-serif;
+  }
+
+  .vertical-timeline-element-title-add {
+    text-align: center;
+    position: absolute;
+    font-family: "Bebas Neue", sans-serif;
+    left: 100px;
+    padding: 1px;
+    top: 11px;
   }
 
   .vertical-timeline-element-subtitle {
@@ -30,21 +50,32 @@ const Styles = styled.div`
 
   .subtexts {
     background-color: white;
-    margin: 10px auto;
-    width: 260px;
+    margin: 35px auto;
+    width: 120%;
     box-shadow: 0 0.34em 0.5em 0 rgba(16, 24, 60, 0.25),
       0 0.5em 1.25em 0 rgba(61, 23, 79, 0.15) !important;
     position: relative;
     border-radius: 15px;
-    height: 130px;
+    height: 150px;
     display: inline-block;
     padding: 14px;
     text-align: left;
     font-family: "Montserrat", sans-serif;
   }
+
+  .buttondark {
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    position: absolute;
+    top: 1px;
+    left: 410px;
+    padding: 0px;
+    margin: 1px;
+  }
 `;
 
-const EventsList = ({ events }) => {
+const EventsList = ({ events, removeEvent }) => {
+  const [show, setShow] = useState(false);
   return (
     <div>
       <Styles>
@@ -70,8 +101,42 @@ const EventsList = ({ events }) => {
                 </sub>
                 <p id="description">{event.summary}</p>
               </div>
+              <Button
+                variant="link"
+                className="buttondark"
+                onClick={() => removeEvent(event.id)}
+              >
+                x
+              </Button>
             </VerticalTimelineElement>
           ))}
+          <Button variant="link" className="add" onClick={() => setShow(true)}>
+            <VerticalTimelineElement
+              icon={<AddIcon />}
+              contentStyle={{ opacity: "0", display: "none" }}
+              box-shadow={{ opacity: "0" }}
+              contentArrowStyle={{ borderRight: "10px solid  black" }}
+              iconStyle={{
+                background: "black",
+                opacity: ".9",
+              }}
+            ></VerticalTimelineElement>
+          </Button>
+          <Modal
+            show={show}
+            onHide={() => setShow(false)}
+            dialogClassName="modal-90w"
+            aria-labelledby="example-custom-modal-styling-title"
+          >
+            <Modal.Header closeButton>
+              <Modal.Title id="example-custom-modal-styling-title">
+                Add Event Modal
+              </Modal.Title>
+            </Modal.Header>
+            <ModalBody>
+              <EventsForm />
+            </ModalBody>
+          </Modal>
         </VerticalTimeline>
       </Styles>
     </div>
@@ -83,3 +148,4 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps)(EventsList);
+//click delete button goes to actions ->

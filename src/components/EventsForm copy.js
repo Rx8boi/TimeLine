@@ -4,10 +4,25 @@ import { addEvent } from "../actions/eventsActions";
 import styled from "styled-components";
 
 const Styles = styled.div`
+  .forms {
+    background-color: #f2f2f2;
+    margin: 70px auto;
+    width: 300px;
+    box-shadow: 0 0.34em 0.5em 0 rgba(16, 24, 60, 0.25),
+      0 0.5em 1.25em 0 rgba(61, 23, 79, 0.15) !important;
+    position: relative;
+    border-radius: 10px;
+    height: 470px;
+    display: inline-block;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+  }
+
   .labels {
     background-color: white;
     margin: 20px auto;
-    width: 468px;
+    width: 240px;
     box-shadow: 0 0.34em 0.5em 0 rgba(16, 24, 60, 0.25),
       0 0.5em 1.25em 0 rgba(61, 23, 79, 0.15) !important;
     position: relative;
@@ -15,16 +30,15 @@ const Styles = styled.div`
     height: 310px;
     display: inline-block;
     padding: 25px;
-    text-align: center;
+    text-align: left;
     font-family: "Montserrat", sans-serif;
-    font-size: 1.9vh;
   }
 
   .formbutton {
-    width: 100%;
-    height: 40px;
+    width: 50%;
+    height: 30px;
     margin-top: 4px;
-    border-radius: 8px;
+    border-radius: 2px;
     box-shadow: 0 0.34em 0.5em 0 rgba(16, 24, 60, 0.25),
       0 0.5em 1.25em 0 rgba(61, 23, 79, 0.15) !important;
     background: linear-gradient(
@@ -79,6 +93,9 @@ class EventsForm extends Component {
       <Styles>
         <div className="forms">
           <form onSubmit={this.handleSubmit}>
+            <br></br>
+            <h2>Add Event</h2>
+
             <div className="labels">
               <label>Title: </label>
               <br></br>
