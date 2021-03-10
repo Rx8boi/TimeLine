@@ -49,15 +49,15 @@ export const Jumbotron = () => (
             </p>
           </Col>
           <Col>
-            <div className="social"></div>
+            <span className="social"></span>
           </Col>
           <Col>
-            <div className="foot">
+            <span className="foot">
               <h1>
                 <Logo />
               </h1>
               <p>A place to update & store events of your life</p>
-            </div>
+            </span>
           </Col>
         </Row>
       </Container>

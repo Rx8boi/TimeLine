@@ -9,7 +9,6 @@ const App = () => {
   return (
     <div>
       <NavBar />
-
       <Layout>
         <Router />
       </Layout>

@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-//import { removeEvent } from "../actions/eventsActions";
+import { removeEvent } from "../actions/eventsActions";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -18,6 +18,7 @@ const Styles = styled.div`
   .add {
     position: relative;
     width: 100%;
+    cursor: pointer;
   }
 
   .vertical-timeline-element-title {
@@ -76,6 +77,7 @@ const Styles = styled.div`
 
 const EventsList = ({ events, removeEvent }) => {
   const [show, setShow] = useState(false);
+
   return (
     <div>
       <Styles>
@@ -95,22 +97,22 @@ const EventsList = ({ events, removeEvent }) => {
               icon={<TimeIcon />}
             >
               <h3 className="vertical-timeline-element-title">{event.title}</h3>
-              <div className="subtexts">
+              <span className="subtexts">
                 <sub className="vertical-timeline-element-subtitle">
                   {event.event_type}
                 </sub>
                 <p id="description">{event.summary}</p>
-              </div>
+              </span>
               <Button
                 variant="link"
                 className="buttondark"
-                onClick={() => removeEvent(event.id)}
+                onClick={() => removeEvent(event)}
               >
                 x
               </Button>
             </VerticalTimelineElement>
           ))}
-          <Button variant="link" className="add" onClick={() => setShow(true)}>
+          <span variant="link" className="add" onClick={() => setShow(true)}>
             <VerticalTimelineElement
               icon={<AddIcon />}
               contentStyle={{ opacity: "0", display: "none" }}
@@ -121,7 +123,7 @@ const EventsList = ({ events, removeEvent }) => {
                 opacity: ".9",
               }}
             ></VerticalTimelineElement>
-          </Button>
+          </span>
           <Modal
             show={show}
             onHide={() => setShow(false)}
@@ -147,5 +149,5 @@ const mapStateToProps = (state) => {
   return { events: state.events };
 };
 
-export default connect(mapStateToProps)(EventsList);
+export default connect(mapStateToProps, { removeEvent })(EventsList);
 //click delete button goes to actions ->
