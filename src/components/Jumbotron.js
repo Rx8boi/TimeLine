@@ -39,14 +39,13 @@ const Styles = styled.div`
 export const Jumbotron = () => (
   <Styles>
     <Jumbo fluid className="jumbo">
-      <div className="overlay"></div>
+      <span className="overlay"></span>
       <Container>
         <Row>
           <Col>
             <h2> Connect with me:</h2>
-            <p>
-              <SocialLogo />
-            </p>
+
+            <SocialLogo />
           </Col>
           <Col>
             <span className="social"></span>

@@ -14,11 +14,7 @@ const Developer = () => {
     });
   }, []);
 
-  return (
-    <div>
-      <div className="container" ref={container}></div>
-    </div>
-  );
+  return <div className="container" ref={container}></div>;
 };
 
 export default Developer;
