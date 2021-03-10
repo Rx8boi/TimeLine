@@ -11,9 +11,9 @@ const About = () => {
       <Container>
         <Row>
           <Col>
-            <h1>About the Creater</h1>
+            <h1 align="center">About the Developer</h1>
 
-            <h3>Meet Charles</h3>
+            <h3 align="center">Meet Charles</h3>
             <p>
               Charles is a Junior Software Engineer graduating from Flatiron
               School. He has a background in STEM with a BS in Microbiology &
@@ -29,7 +29,7 @@ const About = () => {
               hikes.
             </p>
 
-            <h3>How would you describe him?</h3>
+            <h3 align="center">How would you describe him?</h3>
             <p>
               He is an energetic, highly motivated and dynamic individual with a
               broad range of hands-on and theoretical experience. Adept at

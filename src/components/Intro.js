@@ -16,7 +16,7 @@ const Intro = () => {
           </Col>
           <Col>
             <br></br>
-            <h1>Welcome To TimeLine App</h1>
+            <h1 align="center">Welcome To TimeLine App</h1>
             <br></br>
             <p>
               TimeLine App was created with the mind-set of adding to a
@@ -26,7 +26,7 @@ const Intro = () => {
               wanted to create something different, more tangible.
             </p>
             <br></br>
-            <h3>Bring in TimeLine App.</h3>
+            <h3 align="center">Bring in TimeLine App.</h3>
             <p>
               A web-app that literally shows the flow of events that brought you
               to where you currently are. Then later in my portfolio another
@@ -42,7 +42,7 @@ const Intro = () => {
               achievements on the .pdf or word document.
             </p>
 
-            <h3>Hope you Enjoy!</h3>
+            <h3 align="center">Hope you Enjoy!</h3>
           </Col>
         </Row>
         <Row></Row>
