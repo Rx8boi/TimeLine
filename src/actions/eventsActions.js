@@ -29,9 +29,10 @@ export const addEvent = (event) => {
 // call remove even then return REMOVE_EVENT -> reducer
 export const removeEvent = (event) => {
   return (dispatch) => {
+    dispatch({ type: "REMOVE_EVENT", payload: event.id });
     fetch(`http://localhost:3000/events/${event.id}`, {
       method: "DELETE",
-      ody: JSON.stringify(event),
+      body: JSON.stringify(event),
       headers: {
         "Content-Type": "application/json",
       },
