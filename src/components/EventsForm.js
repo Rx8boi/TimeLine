@@ -12,7 +12,7 @@ const Styles = styled.div`
       0 0.5em 1.25em 0 rgba(61, 23, 79, 0.15) !important;
     position: relative;
     border-radius: 15px;
-    height: 310px;
+    height: 380px;
     display: inline-block;
     padding: 25px;
     text-align: center;
