@@ -11,7 +11,7 @@ const ReactComponent = () => {
       <a href="https://www.instagram.com/charles.atx">
         <InstaLogo />
       </a>
-      <a href="https://www.facebook.com">
+      <a href="https://www.facebook.com/charlesbutler8">
         <FaceLogo />
       </a>
       <a href="https://twitter.com/Charles_atx_">
