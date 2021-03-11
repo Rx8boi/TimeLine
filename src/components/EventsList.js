@@ -14,7 +14,7 @@ import Modal from "react-bootstrap/Modal";
 import EventsForm from "./EventsForm";
 import { useState } from "react";
 import ReactTooltip from "react-tooltip";
-import { BsFillBackspaceFill } from "react-icons/bs";
+import { BiTrash } from "react-icons/bi";
 import { FcTimeline } from "react-icons/fc";
 
 const Styles = styled.div`
@@ -40,6 +40,7 @@ const Styles = styled.div`
 
   .vertical-timeline-element-subtitle {
     font-family: "Montserrat", sans-serif;
+    text-decoration: underline;
   }
 
   .vertical-timeline-element-content {
@@ -69,12 +70,20 @@ const Styles = styled.div`
 
   .buttondark {
     cursor: pointer;
-    color: black;
+    position: absolute;
+    bottom: 5px;
+    right: 6px;
+    color: 151e25;
+
+    &:hover {
+      color: rgba(16, 24, 60, 0.25);
+    }
+    /*color: black;
     position: absolute;
     top: 0px;
     left: 9px;
     padding: 0px;
-    margin: 1px;
+    margin: 1px;*/
   }
 `;
 
@@ -100,18 +109,21 @@ const EventsList = ({ events, removeEvent }) => {
             icon={<TimeIcon />}
           >
             <h3 className="vertical-timeline-element-title">{event.title}</h3>
+            <h5>
+              <span
+                variant="link"
+                className="buttondark"
+                onClick={() => removeEvent(event)}
+              >
+                <BiTrash />
+              </span>
+            </h5>
+
             <span className="subtexts">
               <sub className="vertical-timeline-element-subtitle">
                 {event.event_type}
               </sub>
               <p id="description">{event.summary}</p>
-            </span>
-            <span
-              variant="link"
-              className="buttondark"
-              onClick={() => removeEvent(event)}
-            >
-              <BsFillBackspaceFill />
             </span>
           </VerticalTimelineElement>
         ))}
