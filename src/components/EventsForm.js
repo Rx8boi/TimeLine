@@ -62,6 +62,13 @@ class EventsForm extends Component {
 
   handleChange = (e) => {
     //name is name attribute , value is what user types
+
+    const callEvents = (events) = {
+      events.map(event) = event() => {
+      return event.title
+      } 
+    }
+
     const { name, value } = e.target;
 
     this.setState({
@@ -118,6 +125,14 @@ class EventsForm extends Component {
                 onChange={this.handleChange}
                 name="date"
               ></input>
+              <br></br>
+              Current Event Query
+              <select>
+
+                <option value="">Work History</option>
+
+              </select>
+              <p>Selection: { }</p>
             </div>
             <br></br>
 
@@ -132,10 +147,4 @@ class EventsForm extends Component {
 //need null value as first argument but instead of mapDispatchToProps can use addEvent instead
 export default connect(null, { addEvent })(EventsForm);
 
-//Dropdown? For event_type
-//          <select value={this.state.event_type} onChange={this.handleChange} name="event_type">
-//            <option value="Work History">Work History</option>
-//            <option value="Education">Education</option>
-//            <option value="Life Event">Life Event</option>
-//           <option value="Other">Other</option>
-//            </select>
+
