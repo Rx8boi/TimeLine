@@ -16,6 +16,10 @@ import { useState } from "react";
 import ReactTooltip from "react-tooltip";
 import { BiTrash } from "react-icons/bi";
 import { FcTimeline } from "react-icons/fc";
+import { useEffect } from 'react';
+
+// use ref -> for previous counted container...
+import { useRef } from 'react';
 
 const Styles = styled.div`
   .add {
@@ -90,9 +94,34 @@ const Styles = styled.div`
 const EventsList = ({ events, removeEvent }) => {
   const [show, setShow] = useState(false);
 
+  //Callback
+
+  
+    const [count, setCount] = useState(0);
+
+ 
+    console.log(count);
+
+    const countedRef = useRef();
+    useEffect(() => {
+      countedRef.current = count;
+    });
+    const counted = countedRef.current;
+
+   
+  
   return (
     <Styles>
       <br></br>
+      {/* submit, to display on each card iteration, set initial state at 0. */}
+
+      <input
+        type="number"
+        id="inputnumb"
+        min="0"
+        onChange={() => setCount(count + 1) }
+      /> current: {count} previous: {counted}
+
       <VerticalTimeline>
         <ReactTooltip />
         {events.map((event) => (
@@ -125,6 +154,7 @@ const EventsList = ({ events, removeEvent }) => {
               </sub>
               <p id="description">{event.summary}</p>
             </span>
+            <p id="counter">Counter: {count+counted}</p>
           </VerticalTimelineElement>
         ))}
         <span
@@ -135,6 +165,7 @@ const EventsList = ({ events, removeEvent }) => {
           onClick={() => setShow(true)}
         >
           <VerticalTimelineElement
+            key="add"
             icon={<AddIcon />}
             contentStyle={{ opacity: "0", display: "none" }}
             box-shadow={{ opacity: "0" }}
@@ -161,6 +192,15 @@ const EventsList = ({ events, removeEvent }) => {
           </Modal.Header>
           <ModalBody>
             <EventsForm />
+            <br></br>
+            <h3>Current Events on TimeLine:</h3>
+            {events.map((event) => (
+              <select>
+                <option value="" placeholder="Past Events">
+                  {event.title}
+                </option>
+              </select>
+            ))}
           </ModalBody>
         </Modal>
       </VerticalTimeline>

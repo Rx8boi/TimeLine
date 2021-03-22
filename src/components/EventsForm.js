@@ -63,11 +63,11 @@ class EventsForm extends Component {
   handleChange = (e) => {
     //name is name attribute , value is what user types
 
-    const callEvents = (events) = {
-      events.map(event) = event() => {
-      return event.title
-      } 
-    }
+    // const callEvents = (events) = {
+    //   events.map(event) = event() => {
+    //   return event.title
+    //   } 
+    // }
 
     const { name, value } = e.target;
 
@@ -125,16 +125,16 @@ class EventsForm extends Component {
                 onChange={this.handleChange}
                 name="date"
               ></input>
-              <br></br>
-              Current Event Query
+              
+              {/* /* Current Event Query
               <select>
 
                 <option value="">Work History</option>
 
               </select>
-              <p>Selection: { }</p>
+              <p>Selection: { }</p> */ }
             </div>
-            <br></br>
+           
 
             <input type="submit" value="Submit" className="formbutton" />
           </form>
