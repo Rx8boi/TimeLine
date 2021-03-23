@@ -196,15 +196,7 @@ const EventsList = ({ events, removeEvent }) => {
           </Modal.Header>
           <ModalBody>
             <EventsForm />
-            <br></br>
-            <h3>Current Events on TimeLine:</h3>
-            {events.map((event) => (
-              <select>
-                <option value="" placeholder="Past Events">
-                  {event.title}
-                </option>
-              </select>
-            ))}
+           
           </ModalBody>
         </Modal>
       </VerticalTimeline>

@@ -7,11 +7,20 @@ const CardCount = props => {
   //set to cards intial count value
   const [cardCounts, setCount] = useState(0)
 // Each card renders its own count
-    return <>
-        {/* Call current - Show  */}
+    return (
+      <>
+        {/*  Call current card likes -> add parent props -> Show props to button */}
         THIS CARDS LIKES: {cardCounts}
-        <br></br><button onClick={() => { setCount(cardCounts + props.count) }}>Add {props.count} More Likes!</button>
-    </>;
+        <br></br>
+        <button
+          onClick={() => {
+            setCount(cardCounts + props.count);
+          }}
+        >
+          Add {props.count} More Likes!
+        </button>
+      </>
+    );
 }
 
 export default CardCount
