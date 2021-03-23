@@ -16,10 +16,10 @@ import { useState } from "react";
 import ReactTooltip from "react-tooltip";
 import { BiTrash } from "react-icons/bi";
 import { FcTimeline } from "react-icons/fc";
-import { useEffect } from 'react';
-
+import { useEffect } from "react";
+import CardCount from "./CardCount";
 // use ref -> for previous counted container...
-import { useRef } from 'react';
+import { useRef } from "react";
 
 const Styles = styled.div`
   .add {
@@ -96,32 +96,33 @@ const EventsList = ({ events, removeEvent }) => {
 
   //Callback
 
-  
-    const [count, setCount] = useState(0);
+  // Display variable and function -> set initial state
+  const [count, setCount] = useState(1);
+  // Initial state should be 0....
+  console.log(count);
+  // Counted will be previous render of state.
+  // const countedRef = useRef();
+  // useEffect(() => {
+  //   countedRef.current = count;
+  // });
+  // const counted = countedRef.current;
+  // 1 on use state
+  // 1 on useState
+  // Code Wars -> bathroom breaks, glass of water -> goning blank
 
- 
-    console.log(count);
-
-    const countedRef = useRef();
-    useEffect(() => {
-      countedRef.current = count;
-    });
-    const counted = countedRef.current;
-
-   
-  
   return (
     <Styles>
       <br></br>
       {/* submit, to display on each card iteration, set initial state at 0. */}
-
+      <h5>Add to Like Count by:</h5>
       <input
         type="number"
         id="inputnumb"
         min="0"
-        onChange={() => setCount(count + 1) }
-      /> current: {count} previous: {counted}
-
+        onChange={(e) => setCount(parseInt(e.target.value))}
+      />
+      <br></br>
+      <br></br>
       <VerticalTimeline>
         <ReactTooltip />
         {events.map((event) => (
@@ -154,7 +155,10 @@ const EventsList = ({ events, removeEvent }) => {
               </sub>
               <p id="description">{event.summary}</p>
             </span>
-            <p id="counter">Counter: {count+counted}</p>
+
+            <p>
+              <CardCount count={count} />
+            </p>
           </VerticalTimelineElement>
         ))}
         <span
