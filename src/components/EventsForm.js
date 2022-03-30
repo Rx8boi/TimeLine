@@ -53,11 +53,19 @@ const Styles = styled.div`
 class EventsForm extends Component {
   //local state ->
   state = {
-    event_type: "",
-    summary: "",
-    skills_learned: "",
-    date: "",
-    title: "",
+    // event_type: "",
+    // summary: "",
+    // skills_learned: "",
+    // date: "",
+    // title: "",
+    id: "",
+    username: "",
+    name: "",
+    email: "",
+    website: "",
+    phone: "",
+
+    
   };
 
   handleChange = (e) => {
@@ -87,44 +95,74 @@ class EventsForm extends Component {
         <div className="forms">
           <form onSubmit={this.handleSubmit}>
             <div className="labels">
-              <label>Title: </label>
+              <label>username: </label>
               <br></br>
               <input
                 type="text"
-                value={this.state.title}
+                value={this.state.username}
                 onChange={this.handleChange}
-                name="title"
-                placeholder="Title of new event"
+                name="username"
+                placeholder="Login name"
               ></input>
               <br></br>
-              <label>Event Type: </label>
+              <label>Name: </label>
               <br></br>
               <input
                 type="text"
-                value={this.state.event_type}
+                value={this.state.name}
                 onChange={this.handleChange}
-                name="event_type"
-                placeholder="Type of Event"
+                name="name"
+                placeholder="Full name"
               ></input>
               <br></br>
-              <label>Summary: </label>
+              <label>Email: </label>
+              <br></br>
+              <input
+                type="email"
+                value={this.state.email}
+                onChange={this.handleChange}
+                name="email"
+                placeholder="Email address"
+              ></input>
+              <br></br>
+              <label>Website: </label>
+              <br></br>
+              <input
+                type="url"
+                value={this.state.website}
+                onChange={this.handleChange}
+                name="website"
+                placeholder="website"
+              ></input>
+              <br></br>
+              <label>Phone #: </label>
+              <br></br>
+              <input
+                type="phone"
+                value={this.state.phone}
+                onChange={this.handleChange}
+                name="phone"
+                placeholder="Phone number"
+              ></input>
+              <br></br>
+              {/* <label>Body: </label>
               <br></br>
               <input
                 type="text_field"
-                value={this.state.summary}
+                value={this.state.company.catchPhrase}
                 onChange={this.handleChange}
-                name="summary"
-                placeholder="Summary of Events"
-              ></input>
+                name="catchPhrase"
+                placeholder="Catch Phrase"
+              ></input> */}
               <br></br>
-              <label>Date: </label>
+              {/* <label>Date: </label>
               <br></br>
               <input
                 type="date"
                 value={this.state.date}
                 onChange={this.handleChange}
                 name="date"
-              ></input>
+              ></input> */}
               
               {/* /* Current Event Query
               <select>

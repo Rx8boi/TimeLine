@@ -130,15 +130,16 @@ const EventsList = ({ events, removeEvent }) => {
             contentStyle={{ background: "#f2f2f2", color: "black" }}
             contentArrowStyle={{ borderRight: "9px solid  black" }}
             key={event.id}
-            date={event.date}
-            dateClassName="date"
+            // date={event.date}
+            // dateClassName="date"
             iconStyle={{
               background: "black",
               opacity: ".9",
             }}
             icon={<TimeIcon />}
           >
-            <h3 className="vertical-timeline-element-title">{event.title}</h3>
+            <h3 className="vertical-timeline-element-title">{event.name}</h3>
+            <h6 align='center'>{event.username}</h6>
             <h5>
               <span
                 variant="link"
@@ -151,9 +152,11 @@ const EventsList = ({ events, removeEvent }) => {
 
             <span className="subtexts">
               <sub className="vertical-timeline-element-subtitle">
-                {event.event_type}
+              {event.email}
               </sub>
-              <p id="description">{event.summary}</p>
+              <p id="description">{event.website}</p>
+              <p id="description">{event.phone}</p>
+         
             </span>
 
             <p>

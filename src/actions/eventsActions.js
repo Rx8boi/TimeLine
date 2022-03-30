@@ -3,9 +3,10 @@
 export const fetchEvents = () => {
   //why we installed thunk middleware we need dispatch as an argument
   return (dispatch) => {
-    fetch("http://localhost:3000/events")
+    fetch("https://jsonplaceholder.typicode.com/users")
       .then((resp) => resp.json())
       .then((events) => dispatch({ type: "FETCH_EVENTS", payload: events }));
+     
     //.then((events) => console.log("fetchEvents", events))
   };
 };
@@ -14,7 +15,7 @@ export const fetchEvents = () => {
 
 export const addEvent = (event) => {
   return (dispatch) => {
-    fetch("http://localhost:3000/events", {
+    fetch("https://jsonplaceholder.typicode.com/users", {
       method: "POST",
       body: JSON.stringify(event),
       headers: { "Content-Type": "application/json" },
@@ -30,7 +31,7 @@ export const addEvent = (event) => {
 export const removeEvent = (event) => {
   return (dispatch) => {
     dispatch({ type: "REMOVE_EVENT", payload: event.id });
-    fetch(`http://localhost:3000/events/${event.id}`, {
+    fetch(`https://jsonplaceholder.typicode.com/users/${event.id}`, {
       method: "DELETE",
       body: JSON.stringify(event),
       headers: {
