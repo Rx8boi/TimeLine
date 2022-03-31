@@ -16,10 +16,10 @@ import { useState } from "react";
 import ReactTooltip from "react-tooltip";
 import { BiTrash } from "react-icons/bi";
 import { FcTimeline } from "react-icons/fc";
-import { useEffect } from "react";
 import CardCount from "./CardCount";
+import { useFlags } from "launchdarkly-react-client-sdk";
 // use ref -> for previous counted container...
-import { useRef } from "react";
+
 
 const Styles = styled.div`
   .add {
@@ -91,9 +91,9 @@ const Styles = styled.div`
   }
 `;
 
-const EventsList = ({ events, removeEvent }) => {
+const EventsList = ({ flags, events, removeEvent }) => {
   const [show, setShow] = useState(false);
-
+  const { counterDiv, addModal } = useFlags();
   //Callback
 
   // Display variable and function -> set initial state
@@ -108,19 +108,19 @@ const EventsList = ({ events, removeEvent }) => {
   // const counted = countedRef.current;
   // 1 on use state
   // 1 on useState
-  // Code Wars -> bathroom breaks, glass of water -> goning blank
 
   return (
     <Styles>
       <br></br>
       {/* submit, to display on each card iteration, set initial state at 0. */}
-      <h5>Add to Like Count by:</h5>
+    {counterDiv ?  (<div><h5>Add to Like Count by:</h5>
       <input
         type="number"
         id="inputnumb"
         min="0"
         onChange={(e) => setCount(parseInt(e.target.value))}
-      />
+      /></div>) : (<></>)}
+
       <br></br>
       <br></br>
       <VerticalTimeline>
@@ -160,10 +160,11 @@ const EventsList = ({ events, removeEvent }) => {
             </span>
 
             <p>
-              <CardCount count={count} />
+            {counterDiv ?  (<CardCount count={count} />) : (<></>)}
             </p>
           </VerticalTimelineElement>
         ))}
+         {addModal ?  (<div>
         <span
           variant="link"
           className="add"
@@ -201,7 +202,17 @@ const EventsList = ({ events, removeEvent }) => {
             <EventsForm />
            
           </ModalBody>
-        </Modal>
+        </Modal></div>) : (<div>          <VerticalTimelineElement
+            key="add"
+            icon={<TimeIcon />}
+            contentStyle={{ opacity: "0", display: "none" }}
+            box-shadow={{ opacity: "0" }}
+            contentArrowStyle={{ borderRight: "10px solid  black" }}
+            iconStyle={{
+              background: "black",
+              opacity: ".9",
+            }}
+          ></VerticalTimelineElement></div>)}
       </VerticalTimeline>
     </Styles>
   );
